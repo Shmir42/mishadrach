@@ -11,5 +11,62 @@
 <p>Cool criminal comedian movie</p>
 <h3>Full Metal Jacket</h3>
 <p>Movie about I`m shooting two hundred vietcong soldiers and mothers with his children for 5 minutes</p>
-залишити відгук
-<input> 
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Залишити відгук</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Зворотний зв'язок</h2>
+    <form action="send_email.php" method="POST">
+        <label for="name">Ваше ім'я:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Надіслати</button>
+    </form>
+</div>
+
+</body>
+</html>
